@@ -3,7 +3,7 @@
 require "./methods"
 
 # Info
-name = "Hunged The Game"
+name = "Hangman: The Game"
 
 # Variables
 goal = ""
