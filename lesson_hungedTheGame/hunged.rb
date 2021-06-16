@@ -35,6 +35,6 @@ while (errors < attempts)
 	end
 
 end
-ioh
+f
 
 pust("Game end")
