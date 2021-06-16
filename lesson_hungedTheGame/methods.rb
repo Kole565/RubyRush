@@ -6,10 +6,10 @@ def get_user_input()
 	inp = ""
 
 	while (inp == "")
-		inp = STDIN.gets.encode("UTF-8").chomp
-		puts("In get user inp cycle: " + inp)
+		inp = STDIN.gets.encode("UTF-8").chomp # Output:
+		puts("In get user inp cycle: " + inp)  # In get user inp cycle: ?
 	end
-	puts("In get user inp: " + inp)
+	puts("In get user inp: " + inp)            # In get user inp: ?
 	return inp
 end
 
