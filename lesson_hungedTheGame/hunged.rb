@@ -35,5 +35,6 @@ while (errors < attempts)
 	end
 
 end
+ioh
 
 pust("Game end")
