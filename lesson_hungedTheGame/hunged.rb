@@ -4,6 +4,9 @@ require "./methods"
 
 # Info
 name = "Hangman: The Game"
+description = "Hangman is a paper and pencil guessing game for two or more players. " \
+				"One player thinks of a word, phrase or sentence and the other(s) tries to guess it" \
+				" by suggesting letters within a certain number of guesses."
 
 # Variables
 goal = ""
@@ -14,9 +17,23 @@ errors = 0
 
 # Variables collect
 if (ARGV[0])
-	goal = ARGV[0].encode("UTF-8").chomp
 	
-	goal_array = goal.split("")
+	for argument in ARGV
+		
+		case argument
+		when "-n", "--name"
+			puts(name)
+		when "-desc", "--description"
+			puts(description)
+
+		else
+			
+			if (!goal)
+				goal = argument.encode("UTF-8").chomp
+				goal_array = goal.split("")
+			end
+		end
+	end
 end
 
 # Game
@@ -44,6 +61,5 @@ while (errors < 7)
 	end
 
 end
-
 
 puts("Game end")
