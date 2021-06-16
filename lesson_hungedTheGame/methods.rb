@@ -1,9 +1,9 @@
 puts("Methods loading start")
 
 def get_user_input()
-	inp = nil
+	inp = ""
 	
-	while (inp == nil || inp.to_i != 0)
+	while (inp == "")
 		inp = STDIN.gets.encode("UTF-8").chomp
 	end
 

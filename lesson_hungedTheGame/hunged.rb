@@ -8,14 +8,13 @@ goal_array = []
 good_letters = []
 bad_letters = []
 errors = 0
-attempts = 7
 
 # Variables collect
 
 # Game
 puts("Game start")
 
-# while (errors < attempts)
+# while (errors < 7)
 # 	puts("Ask letter")
 	 
 # 	choice = get_user_input()
