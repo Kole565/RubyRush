@@ -32,7 +32,7 @@ while (errors < attempts)
 	else
 		errors += 1
 		bad_letters << choice
-		update_screen(good_letters, bad_letters)
+		update_screen(good_letters, goal_array)
 	end
 
 end
