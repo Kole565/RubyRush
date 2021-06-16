@@ -13,7 +13,6 @@ attempts = 7
 # Variables collect
 
 # Game
-# Game
 puts("Game start")
 
 # while (errors < attempts)
