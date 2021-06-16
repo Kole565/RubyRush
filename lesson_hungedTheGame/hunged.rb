@@ -17,7 +17,7 @@ puts("Game start")
 
 while (errors < attempts)
 	puts("Ask letter")
-	
+	 
 	choice = get_user_input()
 	choice_check = check_letter(goal_array, good_letters, bad_letters, choice)
 	
