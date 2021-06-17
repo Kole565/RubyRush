@@ -18,7 +18,7 @@ description = "Hangman is a paper and pencil guessing game for two or more playe
 				" by suggesting letters within a certain number of guesses."
 
 # Variables
-goal = ""
+goal = nil
 goal_array = []
 good_letters = []
 bad_letters = []
@@ -28,13 +28,11 @@ errors = 0
 if (ARGV[0])
 	
 	for argument in ARGV
-		
 		case argument
 		when "-n", "--name"
 			puts(name)
 		when "-desc", "--description"
 			puts(description)
-
 		else
 			
 			if (!goal)
@@ -75,5 +73,4 @@ while (errors < 7)
 		puts("You win!")
 		break
 	end
-
 end
