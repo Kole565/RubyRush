@@ -5,6 +5,11 @@ def get_user_input()
 
 	while (inp == "")
 		inp = STDIN.gets.encode("UTF-8").chomp
+		inp.downcase!
+
+		if (inp == "ё")
+			inp = "е"
+		end
 	end
 
 	return inp
