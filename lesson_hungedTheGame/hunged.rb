@@ -46,7 +46,9 @@ if (ARGV[0])
 end
 
 # Game
-puts("Game start")
+puts(name)
+puts(description)
+
 update_screen(good_letters, goal_array, errors)
 
 while (errors < 7)
@@ -56,7 +58,6 @@ while (errors < 7)
 	choice_check = check_letter(goal_array, good_letters, bad_letters, choice)
 	
 	if (choice_check == 1)
-		puts("choice check")
 		
 		good_letters << choice
 		update_screen(good_letters, goal_array, errors)
@@ -76,5 +77,3 @@ while (errors < 7)
 	end
 
 end
-
-puts("Game end")
