@@ -38,7 +38,7 @@ end
 
 def update_screen(visible_letters, word_array, errors)
 	picture = get_picture(errors)
-	line = create_line(visible_letters, word_array)
+	line = "\t " + create_line(visible_letters, word_array)
 
 	if (Gem.win_platform?)
 		# system("cls")
