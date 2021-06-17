@@ -44,10 +44,9 @@ if (ARGV[0])
 end
 
 # Game
+puts
 puts(name)
-puts(description)
-
-update_screen(good_letters, goal_array, errors)
+puts(get_picture(0))
 
 while (errors < 7)
 	puts("You'r letter: ")
