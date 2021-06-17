@@ -66,8 +66,13 @@ while (errors < 7)
 
 	else
 		bad_letters << choice
-		update_screen(good_letters, goal_array, errors)
 		errors += 1
+		update_screen(good_letters, goal_array, errors)
+	end
+
+	if (good_letters.count == goal_array.count)
+		puts("You win!")
+		break
 	end
 
 end
