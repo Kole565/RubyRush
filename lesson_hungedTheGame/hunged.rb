@@ -24,7 +24,7 @@ good_letters = []
 bad_letters = []
 errors = 0
 
-# Variables collect
+# Console arguments scan
 if (ARGV[0])
 	
 	for argument in ARGV
@@ -47,13 +47,14 @@ end
 
 # Game
 puts("Game start")
+update_screen(good_letters, goal_array, errors)
 
 while (errors < 7)
 	puts("You'r letter: ")
 	
 	choice = get_user_input()
 	choice_check = check_letter(goal_array, good_letters, bad_letters, choice)
-	puts("choice check: #{choice_check}")
+	
 	if (choice_check == 1)
 		puts("choice check")
 		
