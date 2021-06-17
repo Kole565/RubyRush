@@ -69,7 +69,7 @@ while (errors < 7)
 		update_screen(good_letters, goal_array, errors)
 	end
 
-	if (good_letters.count == goal_array.count)
+	if (good_letters.count == goal_array.uniq.count)
 		puts("You win!")
 		break
 	end
