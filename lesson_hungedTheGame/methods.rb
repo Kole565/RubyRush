@@ -15,6 +15,7 @@ end
 
 def check_letter(goal_array, good_letters, bad_letters, choice)
 	res = nil
+	puts("Goal array: #{goal_array.to_s}, Choice: #{choice}, Statement: #{goal_array.include?(choice)}")
 	if (goal_array.include?(choice))
 		puts("Good letters: #{good_letters}, bad letters: #{bad_letters}, choice: #{choice}")
 		if ((good_letters + bad_letters).include?(choice))
