@@ -1,7 +1,7 @@
 class Game
 
 	def initialize(goal_word)
-		@letters = get_letters(goal_word)
+		@letters = get_letters(goal_word.downcase)
 		@good_letters = []
 		@bad_letters = []
 		@errors = 0
@@ -27,7 +27,7 @@ class Game
 
 		inp = ""
 		while inp == ""
-			inp = STDIN.gets.encode("UTF-8").chomp
+			inp = STDIN.gets.encode("UTF-8").chomp.downcase
 		end
 
 		next_step(inp)
