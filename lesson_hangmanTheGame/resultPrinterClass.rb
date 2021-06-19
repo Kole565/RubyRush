@@ -1,7 +1,6 @@
 class ResultPrinter
 
 	def print_status(game)
-		cls()
 		puts(get_picture(game.get_value("errors")))
 		puts("Слово: #{get_word_for_print(game.get_value("letters"), game.get_value("good_letters"))}")
 		puts("Ошибки: #{game.get_value("bad_letters").join(", ").to_s}")

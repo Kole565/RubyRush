@@ -28,6 +28,7 @@ errors = 0
 if (ARGV[0])
 	
 	for argument in ARGV
+		
 		case argument
 		when "-n", "--name"
 			puts(name)
@@ -39,7 +40,9 @@ if (ARGV[0])
 				goal = argument.encode("UTF-8").chomp
 				goal_array = goal.split("")
 			end
+			
 		end
+
 	end
 end
 
