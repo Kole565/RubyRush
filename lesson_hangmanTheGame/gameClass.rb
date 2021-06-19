@@ -52,15 +52,14 @@ class Game
 
 		else
 			@bad_letters << letter
+			@errors += 1
 
-			if (errors >= 7)
+			if (@errors >= 7)
 				@status = -1
 			end
 
 		end
 
 	end
-end
 
-game = Game.new("жираф")
-puts(game.get_value("letters").to_s)
+end
