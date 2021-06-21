@@ -1,0 +1,26 @@
+IO Manager:
+	Get user info
+	Use account to save info
+	Print info, values
+
+Account:
+	Save and store user data:
+		Name # Optional - if not - "User"
+		Age # This num don't use in Calculator!
+		Weight # It's constant. Maybe..
+		Last activity time # Not constant
+
+Calculator:
+	Manipulate with data
+	Store formuls (method)
+
+
+What user can do in menu?
+	Navigate accounts
+	Create, change, deleate them
+	Calculate main's functional
+
+What user want to do in first time?
+	See description and guide
+	Create first account
+	Calculate main's functional
