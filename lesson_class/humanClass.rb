@@ -6,6 +6,18 @@ class Human
 		@age = age
 	end
 
+	def set_favorite_film(film_obj)
+		@film = film_obj
+	end
+
+	def favorite_film()
+		
+		if (@film)
+			return @film
+		end
+
+	end
+
 	def who()
 
 		if (@age >= 60)
