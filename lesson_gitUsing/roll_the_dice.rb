@@ -1,10 +1,8 @@
-puts("Roll dice programm")
+global_path = File.dirname(__FILE__)
+
+require (global_path + "/../utils/methods.rb")
 
 dice_edges = 6
-
-for x in 0..10
-	puts("Number is - #{rand(dice_edges) + 1}")
-end
 
 def get_roll(dice_edges)
 	return rand(dice_edges) + 1
@@ -13,11 +11,26 @@ end
 def dice_spin(dice_edges, spin_rate, duration) # duration in seconds
 	duration *= 100
 	for x in 0..duration do
-		puts("#{get_roll(dice_edges)}")
+		print("#{get_roll(dice_edges)}\r")
 		sleep(1 / spin_rate)
-		Gem.win_platform? ? (system "cls") : (system "clear")
 	end
-	puts(get_roll(dice_edges))
 end
 
-dice_spin(dice_edges, 5, 2)
+
+puts("Roll dice programm")
+puts("How many dice?")
+
+inp = get_console_inp()
+puts
+inp = inp.to_i - 1
+
+sum = 0
+for x in 0..inp
+	dice_spin(dice_edges, 5, 50)
+	
+	val = get_roll(dice_edges)
+	puts(val)
+	
+	sum += val
+end
+puts("Sum: #{sum}")
