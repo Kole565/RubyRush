@@ -1,7 +1,15 @@
 class ResultPrinter
 
+	def initialize(path)
+		@global_path = path
+	end
+
 	def print_status(game)
-		puts(get_picture(game.get_value("errors")))
+		begin
+			puts(get_picture("/data/images/#{game.get_value("errors")}.txt"))
+		rescue Errno::ENOENT => exception
+			puts("Image file not found")
+		end
 		puts("Слово: #{get_word_for_print(game.get_value("letters"), game.get_value("good_letters"))}")
 		puts("Ошибки: #{game.get_value("bad_letters").join(", ").to_s}")
 
@@ -37,9 +45,13 @@ class ResultPrinter
 		return word
 	end
 
-	def get_picture(file_num)
-		file = File.new("./image/#{file_num}.txt", "r:UTF-8")
+	def get_picture(file_path)
+		path = @global_path + file_path
+
+		file = File.new(path, "r:UTF-8")
 		picture = file.read
+
+		file.close
 
 		return picture
 	end
