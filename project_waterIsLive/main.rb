@@ -6,24 +6,26 @@ require ("./inputManagerClass.rb")
 require ("./accountClass.rb")
 require ("./calculatorClass.rb")
 
-def setup
-	globalIOManager = InputManager.new()
-	waterCalculator = Calculator.new()
-	accounts = []
-end
+globalIOManager = InputManager.new()
+mainCalculator = Calculator.new()
+accounts_list = []
 
-setup()
+base_account = Account.new(["name", "gender", "age", "weight"])
+globalIOManager.ask_standarts(base_account)
+accounts_list << base_account
 
-puts("Programm name and desc")
-if (!accounts)
-	puts("Accounts list empty. Want to add one?")
-	if (globalIOManager.pos_neg_question())
-		account = Account.new(account_standarts)
-		globalIOManager.ask_standarts(account, account_standarts)
-		accounts << account
-	else
-		puts("OK")
-	end
+puts("Setup Complete")
+
+puts("Хотите узнать необходимое вам колличество воды в день?")
+
+if (globalIOManager.pos_neg_question() == true)
+	puts("Какова ваша дневная активность?")
+	
+	activity_time = globalIOManager.float_question()
+	res = mainCalculator.calc_water_amount(accounts_list[0].get_value("gender"), accounts_list[0].get_value("weight").to_f, activity_time.to_f)
+
+	puts("Вам необходио #{res} л. воды в день.")
 else
-	puts("Accounts list: #{accounts.to_s}")
+	puts("Хорошо. Функционала больше нет. Программа будет закрыта.")
+	abort
 end

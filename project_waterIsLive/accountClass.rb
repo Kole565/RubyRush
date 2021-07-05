@@ -1,6 +1,8 @@
 class Account
 	
 	def initialize(standarts)
+
+		@standarts = standarts
 		
 		for standart in standarts
 			set_value(standart, nil)
@@ -34,8 +36,3 @@ class Account
 	end
 
 end
-
-# Jane = Account.new("Janifer", 20)
-# puts("Jane name: #{Jane.get_value("name")}, Jane age: #{Jane.get_value("age")}")
-# Jane.set_value("age", 21) # Happy Birthday!
-# puts("Jane name: #{Jane.get_value("name")}, Jane age: #{Jane.get_value("age")}")

@@ -4,12 +4,12 @@ class InputManager
 		puts("Input Manager Created")
 	end
 
-	def ask_standarts(account, standarts)
+	def ask_standarts(account)
 		puts("Ask Standarts")
 
-		if (standarts)
+		if (account.get_value("standarts"))
 			
-			for standart in standarts
+			for standart in account.get_value("standarts")
 				account.set_value(standart, ask_value(account, standart))
 			end
 
@@ -34,7 +34,7 @@ class InputManager
 		neg_answ = ["n", "no", "н", "нет"]
 		
 		inp = ""
-		while ((pos_answ + neg_answ).include?(inp))
+		while (!(pos_answ + neg_answ).include?(inp))
 			inp = STDIN.gets.encode("UTF-8").chomp.downcase
 		end
 
@@ -46,14 +46,15 @@ class InputManager
 		
 	end
 
-end
+	def float_question()
+		
+		inp = ""
+		while (inp == "" || inp == nil)
+			inp = STDIN.gets.encode("UTF-8").chomp
+		end
 
-# standarts = ["name", "gender", "age"]
-# vasya = Account.new(standarts)
-# puts(vasya.get_value("name"))
-# IManager = InputManager.new()
-# IManager.ask_standarts(vasya, standarts)
-# puts()
-# puts("Vasya name: #{vasya.get_value("name")}")
-# puts("Vasya gender: #{vasya.get_value("gender")}")
-# puts("Vasya age: #{vasya.get_value("age")}")
+		return inp
+		
+	end
+
+end
