@@ -28,32 +28,3 @@ def get_console_inp(hidden = false, exit_inp = nil)
 	end
 
 end
-
-def work_with_file(full_file_path = "", work_func = test(), mode = "a", *work_func_args)
-	# Don't tested
-	# Usless => should be deleated
-	if (File.exist?(full_file_path))
-		file = File.new(full_file_path, "#{mode}:UTF-8")
-		
-		case mode
-		when "r"
-			output = work_func(file)
-		else
-			work_func(file)
-		end
-
-		file.close
-
-		if (output)
-			return output
-		end
-		
-	else
-		return
-	end
-
-end
-
-def test()
-	return "Test func from methods.rb in utils"
-end
