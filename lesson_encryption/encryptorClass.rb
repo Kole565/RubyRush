@@ -4,33 +4,28 @@
 #
 # We contain Encryptor class here
 
+require "digest"
+require_relative "../utils/methods.rb"
+require_relative "../utils/winEncodeFix.rb"
+
 class Encryptor
 	
 	def initialize()
-		require "digest"
-		require_relative "../utils/methods.rb"
-
 		# puts("Require's loaded")
 	end
 
-	def ask_value()
-		@value = get_console_inp()
-	end
-
-	def encrypt(value="", mode="md5")
-		
-		if (value == "") # if user not give string to convert, try use class value
-			value = @value
-		end
+	def encrypt(str_to_convert="", mode="md5")
 
 		hash = ""
 		case mode.downcase
 		when "md5"
-			hash = Digest::MD5.hexdigest(value)
+			hash = Digest::MD5.hexdigest(str_to_convert)
 		when "sh1"
-			hash = Digest::SH1.hexdigest(value)
+			hash = Digest::SH1.hexdigest(str_to_convert)
 		end
-
+		puts("Hash: #{hash}")
+		puts("Value: #{str_to_convert}")
+		
 		return hash
 	end
 

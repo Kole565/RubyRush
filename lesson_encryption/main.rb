@@ -1,21 +1,21 @@
 require_relative "encryptorClass.rb"
+require_relative "../utils/winEncodeFix.rb"
 
 encryptor = Encryptor.new()
 
 puts("Введите слово или фразу для шифрования: ")
-encryptor.ask_value()
+usr_str = get_console_inp()
 
 puts("Каким способом зашифровать: ")
 puts("1. MD5")
 puts("2. SH1")
+code_meth = get_console_inp()
 
-choice = get_console_inp()
-
-case choice.downcase
+case code_meth.downcase
 when "1" || "md5"
-	hash = encryptor.encrypt(mode="md5")
+	hash = encryptor.encrypt(usr_str, mode="md5")
 when "2" || "sh1"
-	hash = encryptor.encrypt(mode="sh1")
+	hash = encryptor.encryptusr_str, (mode="sh1")
 end
 
 puts("Вот что получилось: ")
