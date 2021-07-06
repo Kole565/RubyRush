@@ -1,5 +1,3 @@
-require "objspace"
-
 what_to_count = [
 42,
 "Василий",
