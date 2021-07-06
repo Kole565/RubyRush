@@ -20,8 +20,8 @@ class Encryptor
 		case mode.downcase
 		when "md5"
 			hash = Digest::MD5.hexdigest(str_to_convert)
-		when "sh1"
-			hash = Digest::SH1.hexdigest(str_to_convert)
+		when "sha1"
+			hash = Digest::SHA1.hexdigest(str_to_convert)
 		end
 		puts("Hash: #{hash}")
 		puts("Value: #{str_to_convert}")

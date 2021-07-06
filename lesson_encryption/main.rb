@@ -14,8 +14,8 @@ code_meth = get_console_inp()
 case code_meth.downcase
 when "1" || "md5"
 	hash = encryptor.encrypt(usr_str, mode="md5")
-when "2" || "sh1"
-	hash = encryptor.encryptusr_str, (mode="sh1")
+when "2" || "sha1"
+	hash = encryptor.encrypt(usr_str, mode="sha1")
 end
 
 puts("Вот что получилось: ")
