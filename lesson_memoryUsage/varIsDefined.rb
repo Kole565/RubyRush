@@ -1,5 +1,3 @@
-require "objspace"
-
 a = 42
 # b = "Hi"
 
