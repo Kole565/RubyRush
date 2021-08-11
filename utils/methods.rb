@@ -3,8 +3,7 @@ require("io/console")
 def get_console_inp(hidden = false, exit_inp = nil)
 	# Get input from user
 	# Can get hidden inp and have custom exit inp value
-	# Tested
-	# Work and useful
+	
 	inp = ""
 	
 	if (hidden == true)
