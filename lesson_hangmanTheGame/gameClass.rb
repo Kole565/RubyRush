@@ -40,7 +40,6 @@ class Game
 
 		elsif (@good_letters.include?(letter) || @bad_letters.include?(letter))
 			return
-		
 		end
 
 		if (@letters.include?(letter))

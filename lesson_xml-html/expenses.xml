@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<expenses>
+	
+	<expense date="02.10.2020" category="Comunication" amount="21000" >
+		Phone on birthday
+	</expense>
+
+	<expense date="01.10.2020" category="Food" amount="1000" >
+		Sweets
+	</expense>
+
+</expenses>
