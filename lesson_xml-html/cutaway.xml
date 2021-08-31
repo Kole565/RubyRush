@@ -3,17 +3,17 @@
 
 	<full_name>
 
-		<name_part title="first_name">
+		<first_name>
 			Nik
-		</name_part>
+		</first_name>
 
-		<name_part title="last_name">
+		<last_name>
 			Stepanov
-		</name_part>
+		</last_name>
 
-		<name_part title="middle_name">
+		<middle_name>
 			Viktorovich
-		</name_part>
+		</middle_name>
 
 	</full_name>
 
@@ -21,21 +21,21 @@
 
 		<phone_nums>
 
-			<num title="main">
+			<main>
 				+ 7 900 912 60 87
-			</num>
+			</main>
 
-			<num title="mom">
+			<mom>
 				+ 8 953 268 32 31
-			</num>
+			</mom>
 
 		</phone_nums>
 
 		<emails>
 
-			<email title="main" domain="gmail.com">
+			<main>
 				rjkz565rjkz565@gmail.com
-			</email>
+			</main>
 
 			<email title="school" domain="mail.com">
 				school_main_mail@mail.com
@@ -50,21 +50,21 @@
 		<skills>
 			My skills
 
-			<skill category="programming">
+			<python>
 				Can read and write simple code on Python
-			</skill>
+			</python>
 
-			<skill category="programming">
+			<ruby>
 				Can read and write simple code on Ruby
-			</skill>
+			</ruby>
 
-			<skill category="programming">
+			<c_sharp>
 				Can read and write simple code on C#(write some scripts)
-			</skill>
+			</c_sharp>
 
-			<skill category="housekeeping">
+			<cooking>
 				I know how cooking
-			</skill>
+			</cooking>
 
 		</skills>
 
