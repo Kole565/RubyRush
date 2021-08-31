@@ -1,8 +1,10 @@
 require_relative("lib/bookClass.rb")
+require_relative("lib/filmClass.rb")
+require_relative("lib/productCollectionClass")
 
-harry_potter_book = Book.new(300, 42)
+main_collection = ProductCollection.from_dir("./data")
 
-puts("Book about Harry Potter cost: #{harry_potter_book.cost}")
-puts("Books about Harry Potter on warehouse: #{harry_potter_book.amount}")
+puts("Collection to_s method test: ")
+puts main_collection
 
-puts("Test complete")
+puts("Tests complete")
