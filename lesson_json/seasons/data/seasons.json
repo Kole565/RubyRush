@@ -1,0 +1,31 @@
+{
+	"winter_early":
+	{
+		"date": "01.11 31.12",
+		"weather": "Chill"
+	},
+
+	"winter_late":
+	{
+		"date": "01.01 28.02",
+		"weather": "Chill"
+	},
+
+	"spring":
+	{
+		"date": "01.03 30.04",
+		"weather": "Sunny"
+	},
+
+	"summer":
+	{
+		"date": "01.05 31.07",
+		"weather": "Warm"
+	},
+
+	"autumn":
+	{
+		"date": "01.08 31.10",
+		"weather": "Rainy"
+	}
+}
