@@ -1,0 +1,5 @@
+SELECT * FROM people WHERE work_place_id=1			# Select all people in company 1
+
+SELECT * FROM people WHERE work_place_id=(			# Select all people in company named "Google"
+	SELECT ROWID FROM work_places WHERE name="Google"
+)

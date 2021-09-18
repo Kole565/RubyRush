@@ -2,7 +2,7 @@ require "rexml/document"
 require "date"
 
 current_path = File.dirname(__FILE__)
-file_name = current_path + "/expenses.xml"
+file_name = current_path + "/expenses_auto.xml"
 
 abort "File not founded" unless File.exist?(file_name)
 
