@@ -1,5 +1,6 @@
-require_relative("bookClass.rb")
-require_relative("filmClass.rb")
+require "rexml/document"
+require_relative "bookClass.rb"
+require_relative "filmClass.rb"
 
 # Class ProductCollection
 # contain any products, implement sorting, viewing
@@ -47,16 +48,47 @@ class ProductCollection
 		# Product collection saved
 	end
 
-	def to_a()
-		# Return all products array
-		
-		all_products_arr = []
-		for product_type in @products.keys
-			all_products_arr += @products[product_type]
+	def self.from_xml(path_to_file)
+		file = File.new(path_to_file)
+		doc = REXML::Document.new(file)
+		file.close
+
+		products_to_save = {}
+		for product in doc.root.elements
+			
+			case product.name
+			when "book"
+				info = {}
+				["title", "author", "genre", "price", "stock", "description"].each do |field|
+					info[field] = product.elements[field].text
+				end
+				
+				book = Book.new(info["price"], info["stock"], info["title"], info["genre"], info["author"])
+					
+				products_to_save["books"] << book
+
+			when "film"
+				info = {}
+				["title", "director", "year", "price", "stock", "description"].each do |field|
+					info[field] = product.elements[field].text
+				end
+				
+				film = Film.new(info["price"], info["stock"], info["title"], info["year"], info["director"])
+					
+				products_to_save["films"] << film
+			end
+
+			self.new(products_to_save)
 
 		end
 
-		return all_products_arr
+		self.new(products_to_save)
+		
+	end
+
+	def to_a()
+		# Return all products array
+		return @products
 	end
 
 	def to_s
