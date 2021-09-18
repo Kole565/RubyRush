@@ -1,7 +1,5 @@
 lesson_fileWriting/data/helloFile.txt
-lesson_fileWriting/data/diary_records
-lesson_fileWriting/data/diary_faces
-insight.txt
+lesson_fileWriting/data/diary_records/*.txt
+*insight.txt
 lesson_heritage/notepad/data/notepad.sqlite
 .vscode
-lesson_fileWriting/data/diary_records/*.txt
