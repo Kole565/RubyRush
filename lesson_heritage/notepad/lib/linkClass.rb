@@ -8,6 +8,10 @@ class Link < Post
 		@url = ""
 	end
 
+	def url
+		return @url
+	end
+
 	def read_from_console()
 		puts("Введите ссылку: ")
 		@url = get_console_inp(exit_inp = "end")
@@ -20,6 +24,21 @@ class Link < Post
 		time_string = "Created: #{@creation_time.strftime("%Y.%m.%d, %H:%M:%S")} \n\r \n\r"
 
 		return [@url, @text, time_string]
+	end
+
+	def to_db_hash
+		return super.merge (
+			{
+				"text" => text,
+				"url" => url
+			}
+		)
+	end
+
+	def load_data(data_hash)
+		super
+		
+		@url = data_hash["url"]
 	end
 
 end
