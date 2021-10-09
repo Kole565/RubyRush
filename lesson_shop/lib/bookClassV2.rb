@@ -3,7 +3,7 @@ require_relative "productClassV2.rb"
 class Book < Product
 	
 	def initialize(name, price=nil, stock=nil, **kwargs)
-		# Call parent to create properties hash
+		# Call parent for 'properties'
 		super(price, stock)
 		
 		# Set own properties

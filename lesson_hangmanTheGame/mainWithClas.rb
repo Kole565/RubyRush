@@ -46,7 +46,7 @@ begin
 		word = args_check(ARGV, word)
 	else
 		begin
-		# If args don't contain goal word use word from file
+		# Args don't provide word => get from file
 			file_reader = FileReader.new()
 			word = file_reader.read_from_file(global_path, "/data/wordsList.txt")
 		rescue => exception

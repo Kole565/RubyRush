@@ -10,7 +10,7 @@ CLOUDINESS = ["fog", "clear", "small overcast", "overcast", "frown"]
 WIND_DIRECTION = ["N", "NE", "E", "SE", "S", "SW", "W", "NW"]
 
 def doc_parse(url)	
-	# Open internet page and return REXML document
+	# Open page, return doc
 	uri = URI.parse(url) # Create uri
 
 	response = Net::HTTP.get_response(uri)
@@ -21,7 +21,7 @@ end
 
 
 def get_weather_report(url, date_ind = 0)
-	# Date Index: 0 - today, 1 - tomorrow and etc.
+	# Date Index: 0 - today, 1 - tomorrow etc.
 	doc = doc_parse(url)
 
 	forecasts = doc.root.elements["REPORT/TOWN"].elements.to_a
