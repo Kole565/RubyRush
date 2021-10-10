@@ -38,7 +38,7 @@ end
 
 # Main method
 def win_check(current_try, goal, choice)
-	res = [] # First - isWin state, second - cold, hot, etc.
+	res = [] # [0] - isWin, [1] - bias
 
 	if (current_try <= attempts)
 		
@@ -95,3 +95,5 @@ while (true)
 
 	else
 		puts()
+	end
+end

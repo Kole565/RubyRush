@@ -1,0 +1,23 @@
+{
+	"H":
+	{
+		"name": "hydrogen",
+		"index": 1,
+		"energy levels": [1]
+	},
+
+	"C":
+	{
+		"name": "carbon",
+		"index": 6,
+		"energy levels": [2, 4]
+	},
+
+	"O":
+	{
+		"name": "oxygen",
+		"index": 8,
+		"energy levels": [2, 6]
+	}
+
+}
