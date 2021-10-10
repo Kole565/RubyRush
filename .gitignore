@@ -3,3 +3,4 @@ lesson_fileWriting/data/diary_records/*.txt
 *insight.txt
 lesson_heritage/notepad/data/notepad.sqlite
 .vscode
+programms/notepad/data/sql/*
