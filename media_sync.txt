@@ -1,4 +1,0 @@
-Create script which sort files in download to folders in media lib.
-Script should use .config file in last folders in hierarchy.
-
-Created on Python

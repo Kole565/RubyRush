@@ -1,7 +1,6 @@
 require "sqlite3"
 
 require_relative "../data/get_db_type.rb"
-require_relative "../../lib/scripts/get_user_inp.rb"
 
 def db_open(options = {})
 
