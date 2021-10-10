@@ -6,7 +6,7 @@ require_relative "../../lib/scripts/get_user_inp.rb"
 def db_open(options = {})
 
 	current_dir = File.dirname(__FILE__)
-	path = "#{current_dir}/../data/#{options[:db_type]}/#{options[:db_name]}.#{get_db_type(options[:db_type])}"
+	path = "#{current_dir}/../data/#{options[:db_type]}/tests/#{options[:db_name]}.#{get_db_type(options[:db_type])}"
 	
 	raise "#{options[:db_type]} #{options[:db_name]} database not found" unless File.exist?(path)
 	db = SQLite3::Database.open(path)

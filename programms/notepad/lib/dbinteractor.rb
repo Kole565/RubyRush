@@ -90,7 +90,7 @@ class DBInteractor
 	def db_path(db_type, file_name, file_type)
 		current_dir = File.dirname(__FILE__)
 		
-		path = "#{current_dir}/../data/#{db_type}/#{file_name}.#{file_type}"
+		path = "#{current_dir}/../data/#{db_type}/tests/#{file_name}.#{file_type}"
 
 		raise "Path #{path} not exist" unless File.exist?(path)
 		path
@@ -99,7 +99,7 @@ class DBInteractor
 	def self.create_sql_db(file_name)
 		current_dir = File.dirname(__FILE__)
 
-		path = "#{current_dir}/../data/sql/#{file_name}.sqlite3"
+		path = "#{current_dir}/../data/sql/tests/#{file_name}.sqlite3"
 
 		db = SQLite3::Database.new(path)
 	end
