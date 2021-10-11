@@ -3,7 +3,7 @@ require_relative "../lib/printer.rb"
 class GameManager
 	# Handle game data
 	# Set behavior, rules
-	# Only for hungman
+	# Only for hangman
 
 	def initialize(opts)
 		@opts = opts

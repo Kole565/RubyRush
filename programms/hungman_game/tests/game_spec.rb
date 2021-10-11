@@ -2,7 +2,7 @@ require "rspec"
 
 require_relative "../lib/gamemanager.rb"
 
-describe "hungman game" do
+describe "hangman game" do
 	# Test for game overall
 
 	it "should be CLASS" do
